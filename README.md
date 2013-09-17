@@ -1,0 +1,2 @@
+NLog.Targets.Redis
+==================
