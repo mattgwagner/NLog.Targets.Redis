@@ -1,7 +1,7 @@
 NLog.Targets.Redis
 ==================
 
-A simple NLog target for pushing entries to a Redis database.
+The NLog Redis Target is a custom target for NLog version 2.0 allowing you to send logging messages to a Redis list. Very useful for logstash integration.
 
 
 NuGet Package
