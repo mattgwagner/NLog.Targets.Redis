@@ -12,23 +12,23 @@
         public int Port { get; set; }
 
         private volatile RedisClient redisClient;
-        private string type;
+        private string dataType;
 
         [Required]
         public string Key { get; set; }
 
         [Required]
-        public string Type 
+        public string DataType 
         {   
-            get { return this.type; }
-            set { this.type = value.ToLower(); } 
+            get { return this.dataType; }
+            set { this.dataType = value.ToLower(); } 
         }
 
         public RedisTarget()
         {
             this.Host = "localhost";
             this.Port = 6379;
-            this.Type = "list";
+            this.DataType = "list";
         }
 
         protected RedisClient RedisClient
@@ -52,12 +52,12 @@
 
         protected override void Write(LogEventInfo logEvent)
         {
-            if (type.Equals("list"))
+            if (dataType.Equals("list"))
                 this.RedisClient.PushItemToList(this.Key, Layout.Render(logEvent));
-            else if (type.Equals("channel"))
+            else if (dataType.Equals("channel"))
                 this.redisClient.PublishMessage(this.Key, Layout.Render(logEvent));
             else
-                throw new InvalidOperationException("Invalid type for redis operation: " + this.type);
+                throw new InvalidOperationException("Invalid type for redis operation: " + this.dataType);
         }
     }
 }
