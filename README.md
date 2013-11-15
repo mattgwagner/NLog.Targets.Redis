@@ -13,7 +13,7 @@ dataType: [channel, list]
 key: your list id or the channel name
 
 Example:
-
+```xml
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" throwExceptions="true">
     <extensions>
       <add assembly="NLog.Targets.Redis" />
@@ -25,7 +25,7 @@ Example:
       <logger name="*" minlevel="Info" writeTo="redis" />
     </rules>
 </nlog>
-
+```
 NuGet Package
 ==================
 
