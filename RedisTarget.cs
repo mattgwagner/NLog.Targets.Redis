@@ -55,7 +55,7 @@
             if (dataType.Equals("list"))
                 this.RedisClient.PushItemToList(this.Key, Layout.Render(logEvent));
             else if (dataType.Equals("channel"))
-                this.redisClient.PublishMessage(this.Key, Layout.Render(logEvent));
+                this.RedisClient.PublishMessage(this.Key, Layout.Render(logEvent));
             else
                 throw new InvalidOperationException("Invalid type for redis operation: " + this.dataType);
         }

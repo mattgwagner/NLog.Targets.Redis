@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>renanmt_NLog.Target.Redis</id>
+    <version>$version$</version>
+    <title>Redis target for NLog</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/renanmt/NLog.Targets.Redis/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/renanmt/NLog.Targets.Redis</projectUrl>
+    <iconUrl>http://i44.tinypic.com/x0wlfk.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>The NLog Redis Target is a custom target for NLog version 2.0 allowing you to send logging messages to a Redis list or channel.</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>redis nlog</tags>
+  </metadata>
+</package>
