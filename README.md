@@ -29,4 +29,4 @@ Example:
 NuGet Package
 ==================
 
-[NLog.Targets.Redis](https://www.nuget.org/packages/NLog.Targets.Redis)
+[NLog.Targets.Redis](https://www.nuget.org/packages/renanmt_NLog.Target.Redis/)
