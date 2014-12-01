@@ -21,3 +21,6 @@ configuration: Release
 
 build:
   project: NLog.Targets.Redis.sln
+
+before_build:
+  cmd: nuget restore
